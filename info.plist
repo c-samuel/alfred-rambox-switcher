@@ -96,7 +96,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>osascript applescripts/rambox_switch.applescript "$1"</string>
+				<string>osascript lib/rambox_switch.applescript "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -228,7 +228,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>osascript applescripts/rambox_switch.applescript "$1"</string>
+				<string>osascript lib/rambox_switch.applescript "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
