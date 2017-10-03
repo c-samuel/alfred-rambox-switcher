@@ -1,7 +1,7 @@
 {
   "name": "alfred-rambox-switcher",
-  "version": "1.0.2",
-  "description": "Switch tabs in rambox",
+  "version": "1.0.3",
+  "description": "Switch tabs in rambox from Alfred",
   "license": "MIT",
   "repository": "crimsonsunset/alfred-rambox-switcher",
   "author": {
@@ -33,6 +33,9 @@
     "gchat",
     "slack"
   ],
+  "directories": {
+    "bin": "./bin"
+  },
   "dependencies": {
     "alfy": "^0.6.0",
     "fuzzy": "^0.1.3"
