@@ -8,11 +8,11 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>8D141ACC-F082-4EF5-8980-5AAFCE33A955</key>
+		<key>3C315EF1-EC56-487E-AA02-480D98E39CB4</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B218421E-01CE-4411-869A-F0F95C5F61A4</string>
+				<string>E4EFD5FA-91B7-4D91-B2C9-588729FAB144</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,31 +21,95 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8D141ACC-F082-4EF5-8980-5AAFCE33A955</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3C315EF1-EC56-487E-AA02-480D98E39CB4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>96DA3257-BF21-4DAB-8E01-1C9E80AC9226</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DF35BD3B-429F-46BC-9EF0-732D5FD5CBAB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DF35BD3B-429F-46BC-9EF0-732D5FD5CBAB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FDC992E4-1EFC-4EC5-9A2D-3007A487AD5D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E4EFD5FA-91B7-4D91-B2C9-588729FAB144</key>
+		<array/>
 	</dict>
+	<key>createdby</key>
+	<string>Joe Sangiorgio</string>
+	<key>description</key>
+	<string>Switch tabs in Rambox</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>rambox-switcher</string>
+	<string>Rambox Switcher</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
+				<key>soundname</key>
+				<string>Glass</string>
+				<key>systemsound</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
-			<string>B218421E-01CE-4411-869A-F0F95C5F61A4</string>
+			<string>3C315EF1-EC56-487E-AA02-480D98E39CB4</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript applescripts/rambox_switch.applescript "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E4EFD5FA-91B7-4D91-B2C9-588729FAB144</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -71,7 +135,7 @@
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>runningsubtext</key>
-				<string>Searching...</string>
+				<string>Looking for that tab</string>
 				<key>script</key>
 				<string>./node_modules/.bin/run-node index.js "$1"</string>
 				<key>scriptargtype</key>
@@ -81,7 +145,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>switch tabs in rambox</string>
+				<string>Switch tabs in rambox</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -94,24 +158,137 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Glass</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>DF35BD3B-429F-46BC-9EF0-732D5FD5CBAB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>r</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Looking for that tab</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>index.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Switch tabs in rambox</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>96DA3257-BF21-4DAB-8E01-1C9E80AC9226</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript applescripts/rambox_switch.applescript "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FDC992E4-1EFC-4EC5-9A2D-3007A487AD5D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>sdfsdf</string>
+	<string>Switch tabs in Rambox</string>
 	<key>uidata</key>
 	<dict>
+		<key>3C315EF1-EC56-487E-AA02-480D98E39CB4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>20</integer>
+		</dict>
 		<key>8D141ACC-F082-4EF5-8980-5AAFCE33A955</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>20</integer>
 		</dict>
-		<key>B218421E-01CE-4411-869A-F0F95C5F61A4</key>
+		<key>96DA3257-BF21-4DAB-8E01-1C9E80AC9226</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>160</integer>
+		</dict>
+		<key>DF35BD3B-429F-46BC-9EF0-732D5FD5CBAB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+		<key>E4EFD5FA-91B7-4D91-B2C9-588729FAB144</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>20</integer>
+		</dict>
+		<key>FDC992E4-1EFC-4EC5-9A2D-3007A487AD5D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>160</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -121,5 +298,7 @@
 	</dict>
 	<key>version</key>
 	<string>1</string>
+	<key>webaddress</key>
+	<string>https://github.com/crimsonsunset/alfred-rambox-switcher</string>
 </dict>
 </plist>
