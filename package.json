@@ -1,6 +1,6 @@
 {
   "name": "alfred-rambox-switcher",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Switch tabs in rambox from Alfred",
   "license": "MIT",
   "repository": "crimsonsunset/alfred-rambox-switcher",
