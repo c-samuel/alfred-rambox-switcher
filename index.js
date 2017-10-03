@@ -1,6 +1,5 @@
 'use strict';
 const alfy = require('alfy');
-const osa = require('node-osascript');
 const fuzzy = require('fuzzy');
 
 //failsafes to run in other envs - dont run it if string is small
