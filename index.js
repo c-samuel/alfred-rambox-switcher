@@ -1,6 +1,7 @@
 'use strict';
 const alfy = require('alfy');
 const fuzzy = require('fuzzy');
+const script = require('applescripts/rambox_switch.applescript');
 
 //failsafes to run in other envs - dont run it if string is small
 const input = alfy.input;
