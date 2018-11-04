@@ -1,0 +1,22 @@
+[
+    {
+        "name": "whatsapp",
+        "path": "./whatsapp.png"
+    },
+    {
+        "name": "telegram",
+        "path": "./telegram.png"
+    },
+    {
+        "name": "void",
+        "path": "./void.png"
+    },
+    {
+        "name": "usthing",
+        "path": "./usthing.png"
+    },
+    {
+        "name": "missy",
+        "path": "./fyp_missy.png"
+    }
+]

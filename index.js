@@ -1,6 +1,7 @@
 'use strict';
 const alfy = require('alfy');
 const fuzzy = require('fuzzy');
+const fs = require('fs');
 
 //failsafes to run in other envs - dont run it if string is small
 const input = alfy.input;
@@ -18,14 +19,14 @@ if (results.length > 0) {
 		
 		const serviceName = string.toLowerCase();
 		let icon = {};
-		if (serviceName.includes('whatsapp')) {
-			icon["path"] = "./whatsapp.png";
-		} else if (serviceName.includes('telegram')) {
-			icon["path"] = "./telegram.png";
-		} else if (serviceName.includes('slack')) {
-			icon["path"] = "./slack.png";
-		}
-		
+
+		let iconsArray = JSON.parse(fs.readFileSync('custom_icons.json', 'utf8'));
+		iconsArray.forEach(element => {
+			if (serviceName.includes(element.name)) {
+				icon["path"] = element.path;
+			}
+		});
+
 		return {
 			title: `${string}`,
 			subtitle: `Position: ${index}!`,
