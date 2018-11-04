@@ -15,9 +15,21 @@ let results = fuzzy.filter(alfy.input.toLowerCase() || 'mt', tabArr);
 if (results.length > 0) {
 	alfy.output(results.map((e, i) => {
 		const {string, index} = e;
+		
+		const serviceName = string.toLowerCase();
+		let icon = {};
+		if (serviceName.includes('whatsapp')) {
+			icon["path"] = "./whatsapp.png";
+		} else if (serviceName.includes('telegram')) {
+			icon["path"] = "./telegram.png";
+		} else if (serviceName.includes('slack')) {
+			icon["path"] = "./slack.png";
+		}
+		
 		return {
-			title: `Did you mean ${string}?`,
-			subtitle: `Index: ${index}!`,
+			title: `${string}`,
+			subtitle: `Position: ${index}!`,
+			"icon": icon,
 			arg: `${index + 1}`
 		}
 	}));
